@@ -1,0 +1,44 @@
+
+<html>
+<head>
+    <title>
+        Flood
+    </title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/upload.css') }}">
+
+</head>
+
+
+<body>
+    <h1>
+        Flood Detection
+    </h1>
+
+    <div class = "container">
+        <div classs = "section border">
+            <h2>Upload Image</h2>
+            <div class = "input-conatiner">
+                <input type = "file" id = imageInput accept = "image/*" onchange = "previewImage(event)">
+            </div>
+             <div class = "preview-conatiner">
+                <img id = imagePreview src="#"  alt = "Image preview" style = "display: none;">
+            </div>
+
+            <button onclick = "submitImage()">Submit</button>
+
+            <div class="spinner" id="imageSpinner" style="display: none;">
+                <img src = "static/img/spinner.gif" alt = "loading...">
+            </div>
+
+            <div class = "result" id = captionResult>
+                <!-- Result Will be ...........  -->
+            </div>
+
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/upload.js') }}"></script>
+
+
+</body>
+
+</html>

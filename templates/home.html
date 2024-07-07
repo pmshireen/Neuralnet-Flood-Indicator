@@ -1,0 +1,57 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>GIS APP</title>-->
+<!--    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">-->
+<!--</head>-->
+<!--<body>-->
+<!--    <header>-->
+<!--        <h1>NeuralNet Flood Predictor</h1>-->
+<!--    </header>-->
+
+<!--    <nav>-->
+<!--        <ul>-->
+<!--            <li><a href="{{ url_for('login') }}">Login</a></li>-->
+<!--            <li><a href="{{ url_for('login') }}">Sign In</a></li>-->
+<!--        </ul>-->
+<!--    </nav>-->
+
+<!--    <div class="main-content">-->
+<!--        &lt;!&ndash; Your main content here &ndash;&gt;-->
+<!--    </div>-->
+
+<!--&lt;!&ndash;    <footer>&ndash;&gt;-->
+<!--&lt;!&ndash;        <p>&copy; 2024 GIS App. All rights reserved.</p>&ndash;&gt;-->
+<!--&lt;!&ndash;    </footer>&ndash;&gt;-->
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeuralNet Flood Predictor</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+  <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+</head>
+
+<body style="background-image: url('{{ url_for('static', filename='img/background-image.jpeg') }}');">
+  <div class="container">
+    <div class="center-content">
+      <img src="static/img/neural.png" alt="Logo" class="logo">
+      <h1>NeuralNet Flood Predictor</h1>
+      <div class="button-container">
+<!--        <button id="loginBtn" onclick="window.location.href = 'login.html';">Login</button>-->
+        <button id="loginBtn" onclick="window.location.href = '/login';">Login</button>
+        <br>
+        <br>
+        <button id="signupBtn" onclick="window.location.href = '/signup';">Signup</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

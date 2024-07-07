@@ -1,0 +1,49 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Google My Maps Image</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h1>Google My Maps Image</h1>-->
+<!--    <form action="/search" method="post">-->
+<!--        <input type="text" name="location" placeholder="Enter location name">-->
+<!--        <button type="submit">Search</button>-->
+<!--    </form>-->
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Map</title>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+
+</head>
+<body style ="background-image: url('{{ url_for('static', filename='img/black.jpg') }}')"; >
+<div style="background-color: #87CEEB; height: 200px; border-radius: 10px; padding: 20px; margin-bottom: 0px;">
+    <h1>NeuralNetFloodPredictor</h1>
+ <form action="/search" method="post">
+    <!-- Input box for location name -->
+    <input type="text" id="locationInput" name="location" placeholder="Enter location name" autocomplete="on" >
+
+    <!-- Button to generate map -->
+    <button >Generate Map</button>
+ </form>
+</div>
+<div >
+<div >
+<img class="generatedImage" src="" alt="Generated Image">
+</div>
+ <div class="content-column">
+        <h1>About Our Application</h1>
+     <p style=" font-size: 24px;"><i>Be Flood-Ready, Not Flood-Scared</i></p>
+     <p style=" font-size: 24px; ">Get ahead of the floods with our advanced flood prediction technology.</p>
+     <img class="generatedImages" src="static/img/neural.png" alt="Generated Image">
+    </div>
+<!-- Default embedded map for Tamil Nadu -->
+</div>
+</body>
+</html>

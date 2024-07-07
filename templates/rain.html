@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flood Prediction</title>
+</head>
+<body>
+    <h2>Flood Prediction</h2>
+    <form action="/" method="post">
+        <label for="current_rainfall">Current Rainfall (mm):</label><br>
+        <input type="text" id="current_rainfall" name="current_rainfall"><br>
+        <label for="cumulative_rainfall">Cumulative Rainfall (mm):</label><br>
+        <input type="text" id="cumulative_rainfall" name="cumulative_rainfall"><br><br>
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction %}
+        <p>Prediction: {{ prediction }}</p>
+    {% endif %}
+</body>
+</html>

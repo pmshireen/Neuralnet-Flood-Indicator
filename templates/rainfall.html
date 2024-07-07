@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flood Prediction</title>
+</head>
+<body>
+    <h1>Flood Prediction</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="rainfall">Rainfall Data (mm):</label><br>
+        <input type="text" id="rainfall" name="rainfall"><br>
+        <label for="river">River Data (m^3/s):</label><br>
+        <input type="text" id="river" name="river"><br><br>
+        <input type="file" id="image" name="image"><br><br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>

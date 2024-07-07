@@ -1,0 +1,65 @@
+/* styles.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end; /* Align contents to the right */
+  align-items: center; /* Center-align contents vertically */
+  min-height: 100vh;
+  padding-right: 20px; /* Add some padding from the right */
+}
+
+.container {
+  text-align: center; /* Center-align contents horizontally */
+}
+
+.logo {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #fff; /* Set app name color to white */
+  font-weight: bold; /* Apply bold style */
+  font-size: 40px; /* Change font size to slightly bigger */
+  text-transform: uppercase; /* Convert text to uppercase */
+  letter-spacing: 2px; /* Add letter spacing */
+  padding: 10px 20px; /* Add padding around the text */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button-container {
+  text-align: center; /* Center-align buttons horizontally */
+}
+
+button {
+  font-size: 18px;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: MediumBlue;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff504d;
+}
+
+#signupBtn {
+  background-color: MediumBlue;
+}
+
+#signupBtn:hover {
+  background-color: #5dbb86;
+}

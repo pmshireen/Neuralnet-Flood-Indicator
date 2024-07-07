@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Map</title>
+       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/map.css') }}">
+</head>
+<body>
+    <!-- Input box for location name -->
+    <input type="text" id="locationInput" placeholder="Enter location name" >
+<!--      <label for="locationSelect">Enter Location:</label>-->
+
+<!--    &lt;!&ndash; Dropdown list for location selection &ndash;&gt;-->
+<!--    <select id="locationSelect">-->
+<!--        <option value="Tamil Nadu">Tamil Nadu</option>-->
+<!--        <option value="Chennai">Chennai</option>-->
+<!--        <option value="Kanyakumari">Kanyakumari</option>-->
+<!--        <option value="Thoothukudi">Thoothukudi</option>-->
+<!--        <option value="Tirunelveli">Tirunelveli</option>-->
+<!--        <option value="Madurai">Madurai</option>-->
+<!--        &lt;!&ndash; Add more options for other cities/districts as needed &ndash;&gt;-->
+<!--    </select>-->
+    <!-- Button to generate map -->
+    <button onclick="generateMapLink()">Generate Map</button>
+    <!-- Default embedded map for Tamil Nadu -->
+<!--    <a href="upload.html" class="next-button">Next</a>-->
+    <button class="next-button" onclick="window.location.href = '/upload';">Next</button>
+
+    <div id="mapContainer">
+    </div>
+    <script>
+        function generateMapLink() {
+            var locationInput = document.getElementById('locationInput').value;
+
+            // Replace spaces with '+'
+            locationInput = locationInput.replace(/\s+/g, '+');
+
+            // Specify the location and zoom level (adjust as needed)
+            var apiKey = 'AIzaSyAym3TGUXY-gx6KrrEemHY57ZqRa6w58ZI'; // Replace with your Google Maps API key
+            var mapLink = `https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${locationInput}&zoom=15`;
+
+            // Create an iframe element for embedding the map
+            var iframe = document.createElement('iframe');
+            iframe.width = '600';
+            iframe.height = '600';
+            iframe.frameBorder = '0';
+            iframe.style.border = '0';
+
+            iframe.src = mapLink;
+
+            iframe.allowfullscreen = true;
+
+            // Clear previous map if any
+            document.getElementById('mapContainer').innerHTML = '';
+
+            // Append the iframe to the map container
+            document.getElementById('mapContainer').appendChild(iframe);
+        }
+    </script>
+</body>
+</html>

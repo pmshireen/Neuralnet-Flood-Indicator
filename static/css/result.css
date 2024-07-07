@@ -1,0 +1,144 @@
+
+    body {
+            font-family: Arial, sans-serif;
+           /* background-color: #f4f4f4; Set a background color */
+            margin: 0;
+            padding: 20px;
+            text-align: center; /* Center-align content */
+        }
+
+        h2 {
+            color: #333; /* Set heading color */
+        }
+
+        #locationInput {
+            width: 70%; /* Decrease input box size */
+            padding: 10px;
+            margin-top: 10px;
+            box-sizing: border-box;
+            border: 2px solid #3498db; /* Set input box border color */
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 15px; /* Increase button size */
+            margin-top: 10px;
+            background-color: #2ecc71; /* Set button background color */
+            color: #fff; /* Set button text color */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #mapContainer {
+            margin-top: 20px;
+            background-color: #ecf0f1; /* Set map container background color */
+            padding: 20px;
+            border-radius: 10px;
+            width: 48%;
+            height : 500px;/* Set width to accommodate two-column layout */
+            display: inline-block; /* Display as inline-block to fit next to the other column */
+        }
+
+        #map {
+            /* Your map styles */
+            width: 70%;
+            height: 100px; /* Adjust the height as needed */
+        }
+
+       #weatherContainer {
+    margin-top: 20px;
+    background-color: #ecf0f1; /* Set weather container background color */
+    padding: 20px;
+    margin-left: 35px;
+    border-radius: 10px;
+    width: 43%;
+    height : 500px;/* Set width to accommodate two-column layout */
+    display: inline-block; /* Display as inline-block to fit next to the other column */
+    vertical-align: top; /* Align to the top */
+
+}
+
+.weather-info {
+    text-align: left; /* Align text to the left */
+    margin-bottom: 10px;
+     background-color: #3498db; /* Blue background color */
+     color: #fff;
+     border-radius: 10px;
+     padding: 10px 20px;
+      margin-bottom: 10px;
+      display: flex;
+       align-items: center;
+            /* Add some space between weather information */
+}
+#weathercard
+{
+background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    width: 780px;
+    height:450px;
+}
+.weather-icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+.weather-info h2 {
+    margin-top: 0; /* Remove default margin for consistency */
+}
+ #resultContainer {
+            display: inline-flex;
+            align-items: center;
+        }
+
+.checkbox-container {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+ .checkbox-label {y6
+ 	   font-size : 25px;
+	   margin-left: 30px;
+	   color: white;
+        }
+
+  .custom-checkbox {
+    width: 30px;
+    height: 30px;
+    appearance: none;
+    border: 2px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    margin-right: 5px; /* Adjust spacing between checkbox and label */
+}
+.custom-checkbox {
+    width: 30px;
+    height: 30px;
+    appearance: none;
+    border: 2px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+}
+
+.custom-checkbox:checked:after {
+    content: '\2713'; /* Checkmark symbol */
+    font-size: 24px; /* Larger font size */
+    color: #2ecc71; /* Green color */
+ font-weight: bold; /* Increase font weight for wider tick mark */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+ .custom-checkbox:checked:after {
+      display: block; }

@@ -1,0 +1,72 @@
+body {
+
+  margin: 50px;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items at the top */
+  min-height: 100vh;
+}
+
+.container {
+  border: 2px solid #fff; /* Add border around container */
+  padding: 20px; /* Add padding to the container */
+  border-radius: 10px; /* Add border radius for rounded corners */
+  position: relative; /* Set container to relative positioning */
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 300px; /* Adjust width as needed */
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Add styles for the Next button */
+.next-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none; /* Remove underline from the link */
+  margin-left: 10px; /* Add margin to separate from the Generate Map button */
+}
+
+.next-button:hover {
+  background-color: #0056b3;
+}
+
+label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* Style for select element */
+        select {
+            width: 50%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            background-color: #fff;
+
+        }

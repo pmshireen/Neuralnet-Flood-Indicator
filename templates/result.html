@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Result</title>
+
+
+</head>
+<body style ="background-image: url('{{ url_for('static', filename='img/black.jpg') }}')";>
+    <div style="background-color: #87CEEB; height: 200px; border-radius: 10px; padding: 20px; margin-bottom: 0px;">
+    <h2 style="margin-left: 800px" >NeuralNetFloodPredictor</h2>
+ <form action="/search" method="post">
+    <!-- Input box for location name -->
+    <input style="margin-left:150px" type="text" id="locationInput" value = {{ location}} autocomplete="on" >
+
+    <!-- Button to generate map -->
+    <button >Generate Map</button>
+ </form>
+  </div>
+    <br>
+ <!-- Map Container -->
+    <div id="mapContainer">
+        <div id="map">
+    <img src="data:image/png;base64,{{ screenshot_data }}" alt="Screenshot" style="width: 900px; height: 500px">
+        </div>
+    </div>
+
+     <div id="weatherContainer">
+         <div id="weathercard">
+        <div class="weather-info">
+     <h2>Temperature: {{ temperature }}</h2><br>
+        </div><br>
+           <div class="weather-info">
+    <h2>Humidity: {{ humidity }}</h2> <br>
+           </div><br>
+           <div class="weather-info">
+    <h2>Current Rainfall : {{ wind_speed }}</h2> <br>
+           </div><br>
+           <div class="weather-info">
+    <h2>Current River level: {{ wind_degree }}</h2>
+           </div>
+              <div class="weather-info">
+    <h2>Flood Prediction level: {{ pred_level }}</h2>
+           </div>
+         </div>
+     </div>
+
+<div id="resultContainer">
+    <!-- Result of Flood Prediction heading and Checkboxes -->
+    <h2 style="margin-left:400px; color: white">Result of Flood Prediction</h2>
+
+
+    <div class="checkbox-container">
+        <label class="checkbox-label">Flood happen</label>
+        <input type="checkbox" class="custom-checkbox" id="floodHappenCheckbox">
+    </div>
+
+    <div class="checkbox-container">
+        <label class="checkbox-label">Flood not happen</label>
+        <input type="checkbox" class="custom-checkbox" id="floodNotHappenCheckbox">
+    </div>
+    </div>
+
+<script>
+        // Get the prediction value
+<!--        var prediction = "{{ prediction }}";-->
+ var prediction = "{{ pred_level }}";
+        // Get the checkboxes
+        var floodHappenCheckbox = document.getElementById("floodHappenCheckbox");
+        var floodNotHappenCheckbox = document.getElementById("floodNotHappenCheckbox");
+
+        // Check the checkboxes based on the prediction value
+        if (prediction == "10%") {
+            floodNotHappenCheckbox.checked = true;
+        } else {
+            floodHappenCheckbox.checked = true;
+        }
+    </script>
+</body>
+</html>

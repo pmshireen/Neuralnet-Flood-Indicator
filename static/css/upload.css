@@ -1,0 +1,97 @@
+  body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+        }
+
+        h1 {
+         text-align: center;
+         margin-top: 30px;
+        }
+        .container{
+
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          margin-top: 50px;
+        }
+
+        .section{
+            width: 45%;
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+
+        }
+
+        .section-border{
+            border: 1px solid #ccc;
+        }
+
+        .input-conatiner{
+            margin-bottom: 20px;
+            display:flex;
+            flex-direction: column;
+            width: calc(50%-10px);
+
+        }
+        .input-conatiner input[type="file"]{
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+            width: calc(100% - 22px);
+            box-sizing : border-box;
+            display: inline-block;
+        }
+        .preview-container img{
+            margin: 0 auto;
+            max-width: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: block;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .preview-container img:hover{
+            transform: scale(1.2);
+        }
+
+        button{
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 3px;
+        }
+        button:hover{
+            background-color: #45a049;
+        }
+        .spinner{
+            display: block;
+            text-align: center;
+        }
+        .spinner img{
+            width: 50%;
+            height: 50%;
+        }
+        .result{
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            display: block;
+
+        }
+        .result div{
+            margin: 10px;
+            font-weight: bold;
+            display: block;
+        }
+
+
