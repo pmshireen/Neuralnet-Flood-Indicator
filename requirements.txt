@@ -1,5 +1,5 @@
 flask==2.2.2
-tensorflow==2.11.0
+tensorflow
 Werkzeug==2.2.2
 pillow
 pymongo
